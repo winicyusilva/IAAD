@@ -1,0 +1,27 @@
+SCRIPT APÓS INSERÇÃO DA COLUNA "sobrenome_vendedor":
+
+CREATE TABLE `vendedores` (
+  `codigo_vendedor` VARCHAR(2) NOT NULL,
+  `nome_vendedor` VARCHAR(20) DEFAULT NULL,
+  `sobrenome_vendedor` VARCHAR(20) DEFAULT NULL,
+  `percentual_comissao` FLOAT DEFAULT NULL,
+  `codigo_regiao` VARCHAR(2) DEFAULT NULL,
+  PRIMARY KEY (`codigo_vendedor`),
+  KEY `codigo_regiao_idx` (`codigo_regiao`),
+  CONSTRAINT `codigo_regiao_fk` FOREIGN KEY (`codigo_regiao`) REFERENCES `regioes` (`codigo_regiao`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=INNODB DEFAULT CHARSET=latin1;
+
+ALTERAÇÃO NA LINHA 773:
+
+(326,79,'2009-10-12 00:00:00','2009-10-28 00:00:00','07');
+
+INSERÇÃO DE DADOS DOS VENDEDORES:
+
+INSERT  INTO `vendedores`(`codigo_vendedor`,`nome_vendedor`,`sobrenome_vendedor`,`percentual_comissao`,`codigo_regiao`) VALUES 
+('01','Marcio','Pereira',10,'01'),
+('02','Gisele','Santos',15,'02'),
+('03','Michele','Maria',12,'05'),
+('04','Viviane','Correia',9,'03'),
+('05','Rafaela','Nilza',8,'04'),
+('06','Institucional','UFRPE',1,'05'),
+('07','Winicyus','Silva',2,'05');

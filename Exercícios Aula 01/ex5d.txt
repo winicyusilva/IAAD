@@ -1,0 +1,3 @@
+SELECT pedidos.numero_pedido, clientes.nome, vendedores.nome_vendedor  FROM pedidos 
+Inner join clientes on clientes.codigo_cliente = pedidos.codigo_cliente
+Inner join vendedores on vendedores.codigo_vendedor = pedidos.codigo_vendedor

@@ -1,0 +1,1 @@
+A diferença é que um BD são coleções organizadas de dados que se relacionam (quando bem escrito) com a finalidade de criar e armazenar alguma informação. Já o SGBD é o programa responsável pelo gerenciamento desses dados com o objetivo de gerenciar o acesso, a manipulação e a organização dos dados.
