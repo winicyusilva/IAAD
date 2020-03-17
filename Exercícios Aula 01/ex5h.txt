@@ -1,0 +1,7 @@
+SELECT a.nome, COUNT(b.codigo_produto) FROM pedidos AS c
+	INNER JOIN clientes AS a
+	ON c.codigo_cliente = a.codigo_cliente
+	INNER JOIN item_pedidos AS b
+	ON c.numero_pedido = b.numero_pedido
+	GROUP BY a.nome
+	ORDER BY COUNT(b.codigo_produto) DESC
